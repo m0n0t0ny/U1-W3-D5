@@ -507,6 +507,17 @@ console.log("match:", result.match);
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
 
+function removeIndex(index, movies) {
+  if (index < 0 || index >= movies.length) {
+    return movies;
+  }
+  movies.splice(index, 1);
+  return movies;
+}
+const indexToRemove = 2;
+const updatedMovies = removeIndex(indexToRemove, movies);
+console.log("updatedMovies:", updatedMovies);
+
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
 /* ESERCIZIO 20
